@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
+app.timeout = 0;
 const cors = require("cors");
+const path = require('path')
 
 const mongoose = require("mongoose");
 
@@ -12,6 +14,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/api/v1/media',mediaRoutes)
+app.use('/public',express.static(path.join(__dirname, 'public')))
 
 
 
