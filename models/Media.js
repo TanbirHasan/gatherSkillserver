@@ -6,6 +6,11 @@ const MediaSchema =  mongoose.Schema({
         required : true,
 
     },
+    courseTag : {
+        type : String,
+        required : true,
+
+    },
     videos : [
         {
             type : String
