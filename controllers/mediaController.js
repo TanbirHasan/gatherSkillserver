@@ -18,6 +18,7 @@ exports.postVideo = async (req, res) => {
 
   if (Array.isArray(req.files.videos) && req.files.videos.length > 0) {
     for (let video of req.files.videos) {
+      console.log(video.path)
       videosPath.push("/" + video.path);
     }
   }
